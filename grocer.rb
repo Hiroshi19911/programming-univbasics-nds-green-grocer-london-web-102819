@@ -19,7 +19,7 @@ def consolidate_cart(cart)
     end
   end
   groceries
-end	end
+end
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
