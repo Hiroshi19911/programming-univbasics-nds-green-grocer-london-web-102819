@@ -5,6 +5,21 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
+  groceries = {}
+
+  cart.each do |grocery|
+    grocery.each do |item, item_hash|
+      groceries[item] ||= item_hash
+
+      if groceries[item].key?(:count)
+        groceries[item][:count] += 1
+      else
+        groceries[item][:count] = 1
+      end
+    end
+  end
+  groceries
+end	end
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
